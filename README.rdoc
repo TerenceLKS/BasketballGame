@@ -1,28 +1,5 @@
-== README
+== README ==
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The purpose of this exercise is to learn to setup and code in Ruby by using the framework of Rails along with libraries and tools such as Sqlite3, etc.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The application produced simulates an administrative role of the user where they are allowed to view, create and modify basketball events.

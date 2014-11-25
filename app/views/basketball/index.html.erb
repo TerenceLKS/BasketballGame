@@ -1,5 +1,12 @@
 <h1>Basketball games list</h1>
 
+<!-- For every flash message, display them -->
+<% flash.each do |key, value| %>
+	<%= content_tag :div, value, class: "flash #{key}" %>
+<% end %>
+
+<br />
+
 <table border="1">
 <tr>
 	<th>Time</th>
@@ -10,18 +17,8 @@
 	<th>Score</th>
 	<th>Action</th>
 </tr>
-<!--
-<tr>
-	<td>test1</td>
-	<td>test2</td>
-	<td>test3</td>
-	<td>test4</td>
-	<td>test5</td>
-	<td>test6</td>
-	<td>test7</td>
-</tr>-->
-
-<!-- loop through the basketballs variable-->
+<!-- loop through the basketballs variable -->
+<!-- This needs to check if if the array is EMPTY -->
 <% @basketballs.each do |basketball| %>
 	<tr>
 		<!-- output basketballs.field -->
@@ -34,7 +31,7 @@
 		<td><input type="button" value="<%= basketball.id %>"></td>
 	</tr>
 <% end %>
-
 </table>
 
-<input type="button" value="Add game" />
+<!-- Create a button using ruby, link it to the controller method new, action of get -->
+<%= button_to "New event", new_basketball_path, :class => "button", :method => :get %>

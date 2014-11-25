@@ -1,0 +1,33 @@
+<h1>Create new Basketball event</h1>
+
+<!-- form_for @basketball do threw an error, code below solves for Rails 4.0.X -->
+<%= form_for @basketball,:url => { :action => "create" } do |f| %>
+	<p> 
+		<%= f.label :time %> 
+		<%= datetime_field(:basketball, :time) %>
+	</p>
+	<p> 
+		<%= f.label :teams %> 
+		<%= f.text_field :teams %>
+	</p>
+	<p> 
+		<%= f.label :location %> 
+		<%= f.text_field :location %>
+	</p>
+	<p> 
+		<%= f.label :status %> 
+		<%= f.text_field :status %>
+	</p>
+	<p> 
+		<%= f.label :winner %> 
+		<%= f.text_field :winner %>
+	</p>	
+	<p> 
+		<%= f.label :score %> 
+		<%= f.text_field :score %>
+	</p>
+	<p>
+		<%= f.submit "Submit" %>
+		<%= f.submit "Cancel" %>
+	</p>
+<% end %>
