@@ -1,2 +1,40 @@
-<h1> Basketball title </h1>
-<p>Hello world!</p>
+<h1>Basketball games list</h1>
+
+<table border="1">
+<tr>
+	<th>Time</th>
+	<th>Teams</th>
+	<th>Location</th>
+	<th>Status</th>
+	<th>Winner</th>
+	<th>Score</th>
+	<th>Action</th>
+</tr>
+<!--
+<tr>
+	<td>test1</td>
+	<td>test2</td>
+	<td>test3</td>
+	<td>test4</td>
+	<td>test5</td>
+	<td>test6</td>
+	<td>test7</td>
+</tr>-->
+
+<!-- loop through the basketballs variable-->
+<% @basketballs.each do |basketball| %>
+	<tr>
+		<!-- output basketballs.field -->
+		<td><%= basketball.time %></td>
+		<td><%= basketball.teams %></td>
+		<td><%= basketball.location %></td>
+		<td><%= basketball.status %></td>
+		<td><%= basketball.winner %></td>
+		<td><%= basketball.score %></td>
+		<td><input type="button" value="<%= basketball.id %>"></td>
+	</tr>
+<% end %>
+
+</table>
+
+<input type="button" value="Add game" />

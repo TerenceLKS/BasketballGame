@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2014-11-26 01:37:11
+  teams: 1
+  location: MyString
+  status: MyString
+  winner: MyString
+  score: 1
+
+two:
+  time: 2014-11-26 01:37:11
+  teams: 1
+  location: MyString
+  status: MyString
+  winner: MyString
+  score: 1
