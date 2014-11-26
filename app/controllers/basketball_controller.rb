@@ -26,6 +26,7 @@ class BasketballController < ApplicationController
 	def new
 		# empty basketball object
 		@basketball = Basketball.new
+		@teams = Teams.all #bad bad bad name for a single obj
 	end
 	
 	# Form from the new action will submit and save to DB

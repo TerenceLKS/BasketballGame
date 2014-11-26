@@ -26,8 +26,15 @@
 				basketball time stores a default date value, I didn't have time
 				to research how to concatenate date and time together as a result to map into DB.
 				essentially this solution is a HACK -->
-		<td><%= "#{basketball.date} #{basketball.time.strftime('%H:%M:%S')}" %></td>
-		<td><%= basketball.team1 %> <br /> <%= basketball.team2 %></td>
+		<td><%= if basketball.date != nil and basketball.time != nil
+					"#{basketball.date} #{basketball.time.strftime('%H:%M:%S')}" 
+				end %> 
+		</td>
+		<td><%= basketball.team1 %> 
+			<% if basketball.team1.to_s != "" %>
+				<br /> 
+			<% end %> 
+			<%= basketball.team2 %></td>
 		<td><%= basketball.location %></td>
 		<td><%= basketball.status %></td>
 		<td><%= basketball.winner %></td>

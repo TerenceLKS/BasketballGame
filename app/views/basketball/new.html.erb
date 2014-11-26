@@ -12,10 +12,14 @@
 	<p> 
 		<!-- Team 1 -->
 		<%= f.label :"Team 1" %> 
-		<%= f.text_field :team1 %>
+		<!-- Explanation : 
+			Target action :team1 field
+			Loop all select options from an array provided with team name
+			Include a blank select -->
+		<%= f.select(:team1, options_from_collection_for_select(@teams.all, :teamName, :teamName), :include_blank => "Select a team" ) %>
 		<!-- Team 2 -->
 		<%= f.label :"Team 2" %> 
-		<%= f.text_field :team2 %>
+		<%= f.select(:team2, options_from_collection_for_select(@teams.all, :teamName, :teamName), :include_blank => "Select a team" ) %>
 	</p>
 	<p> 
 		<%= f.label :location %> 
@@ -27,7 +31,7 @@
 	</p>
 	<p> 
 		<%= f.label :winner %> 
-		<%= f.text_field :winner %>
+		<%= f.select(:winner, options_from_collection_for_select(@teams.all, :teamName, :teamName), :include_blank => "Select a team" ) %>
 	</p>	
 	<p> 
 		<%= f.label :score %> 
