@@ -22,13 +22,21 @@
 <% @basketballs.each do |basketball| %>
 	<tr>
 		<!-- output basketballs.field -->
-		<td><%= basketball.time %></td>
-		<td><%= basketball.teams %></td>
+		<!-- Problem : 
+				basketball time stores a default date value, I didn't have time
+				to research how to concatenate date and time together as a result to map into DB.
+				essentially this solution is a HACK -->
+		<td><%= "#{basketball.date} #{basketball.time.strftime('%H:%M:%S')}" %></td>
+		<td><%= basketball.team1 %> <br /> <%= basketball.team2 %></td>
 		<td><%= basketball.location %></td>
 		<td><%= basketball.status %></td>
 		<td><%= basketball.winner %></td>
 		<td><%= basketball.score %></td>
 		<td><input type="button" value="<%= basketball.id %>"></td>
+	</tr>
+<% end.empty? and begin %>
+	<tr>
+		<td colspan="7">No basketball event records found!</td>
 	</tr>
 <% end %>
 </table>

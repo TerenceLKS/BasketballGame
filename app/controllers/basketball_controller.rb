@@ -11,8 +11,9 @@ class BasketballController < ApplicationController
 		end
 	end
 	
+	# Can't declare private, new.html.erb uses this parameter
 	def basketball_params
-		params.require(:basketball).permit(:time, :teams, :location, :status, :winner, :score)
+		params.require(:basketball).permit(:date, :time, :team1, :team2, :location, :status, :winner, :score)
 	end
 	
 	def index

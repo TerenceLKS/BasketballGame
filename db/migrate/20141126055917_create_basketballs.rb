@@ -1,8 +1,10 @@
 class CreateBasketballs < ActiveRecord::Migration
   def change
     create_table :basketballs do |t|
-      t.datetime :time
-      t.integer :teams
+      t.date :date
+      t.time :time
+      t.string :team1
+      t.string :team2
       t.string :location
       t.string :status
       t.string :winner

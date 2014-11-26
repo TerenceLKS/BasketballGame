@@ -3,12 +3,19 @@
 <!-- form_for @basketball do threw an error, code below solves for Rails 4.0.X -->
 <%= form_for @basketball,:url => { :action => "create" } do |f| %>
 	<p> 
+		<%= f.label :date %> 
+		<%= date_field(:basketball, :date) %>
+		
 		<%= f.label :time %> 
-		<%= datetime_field(:basketball, :time) %>
+		<%= time_field(:basketball, :time) %>
 	</p>
 	<p> 
-		<%= f.label :teams %> 
-		<%= f.text_field :teams %>
+		<!-- Team 1 -->
+		<%= f.label :"Team 1" %> 
+		<%= f.text_field :team1 %>
+		<!-- Team 2 -->
+		<%= f.label :"Team 2" %> 
+		<%= f.text_field :team2 %>
 	</p>
 	<p> 
 		<%= f.label :location %> 
@@ -27,7 +34,8 @@
 		<%= f.text_field :score %>
 	</p>
 	<p>
-		<%= f.submit "Submit" %>
+		<!-- form submit tag, onclick event trigger validation event, if click replace value with "Please wait..." -->
+		<%= f.submit "Submit", :onclick => "return validateform();" %>
 		<%= f.submit "Cancel" %>
 	</p>
 <% end %>

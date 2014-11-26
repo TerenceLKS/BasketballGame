@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125143711) do
+ActiveRecord::Schema.define(version: 20141126055917) do
 
   create_table "basketballs", force: true do |t|
-    t.datetime "time"
-    t.integer  "teams"
+    t.date     "date"
+    t.time     "time"
+    t.string   "team1"
+    t.string   "team2"
     t.string   "location"
     t.string   "status"
     t.string   "winner"

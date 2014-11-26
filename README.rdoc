@@ -1,4 +1,4 @@
-== README ==
+README
 
 The purpose of this exercise is to learn to setup and code in Ruby by using the framework of Rails along with libraries and tools such as Sqlite3, etc.
 
