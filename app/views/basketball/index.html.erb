@@ -7,6 +7,11 @@
 
 <br />
 
+<!-- Create a button using ruby, link it to the controller method new, action of get -->
+<%= button_to "New event", new_basketball_path, :class => "button", :method => :get %>
+
+<br />
+
 <table border="1">
 <tr>
 	<th>Time</th>
@@ -47,6 +52,3 @@
 	</tr>
 <% end %>
 </table>
-
-<!-- Create a button using ruby, link it to the controller method new, action of get -->
-<%= button_to "New event", new_basketball_path, :class => "button", :method => :get %>
