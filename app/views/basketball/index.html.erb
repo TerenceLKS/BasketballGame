@@ -44,7 +44,7 @@
 		<td><%= basketball.status %></td>
 		<td><%= basketball.winner %></td>
 		<td><%= basketball.score %></td>
-		<td><input type="button" value="<%= basketball.id %>"></td>
+		<td><%= button_to "Edit", edit_basketball_path(basketball.id), :method => :get %></td>
 	</tr>
 <% end.empty? and begin %>
 	<tr>
