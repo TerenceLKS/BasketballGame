@@ -29,8 +29,8 @@
 		<%= f.label :status %> 
 		<%= f.select(:status, options_for_select([ 
 								["Not-started", "Not-started"], 
-								["Started", "Started"], 
-								["Finished", "Finished"] ]) ) %>
+								["Started", "Not-started"], 
+								["Finished", "Not-started"] ]) ) %>
 	</p>
 	<p> 
 		<%= f.label :winner %> 

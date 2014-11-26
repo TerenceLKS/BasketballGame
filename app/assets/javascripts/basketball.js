@@ -11,15 +11,7 @@ function validateform()
 	*/
 	var isValid = true;
 	var message = "";
-	var team1 = "";
-	var team2 = "";
-	var status = ""
-	var winner = "";
 	var score;
-	team1 = document.getElementById("basketball_team1").value;
-	team2 = document.getElementById("basketball_team2").value;
-	status = document.getElementById("basketball_status").value;
-	winner = document.getElementById("basketball_winner").value;
 	score = document.getElementById("basketball_score").value;
 	
 	// Score validation
@@ -32,37 +24,6 @@ function validateform()
 	{
 		message += "Score must be a whole number";
 		isValid = false;
-	}
-	
-	// Team validation
-	if ( team1 && team2 ) // They both have something
-	{
-		if ( team1 == team2 )
-		{
-			message += "The first team cannot be the opposing team at the same time";
-			isValid = false;
-		}
-	}
-	
-	// Winner validation
-	if ( winner ) // Has something? Then validate it
-	{
-		// Check if winner belongs in matched teams
-		if ( !(winner == team1 || winner == team2) )
-		{
-			message += "The winner team must belong in one of the teams in play";
-			isValid = false;
-		}		
-	}
-	
-	// Status validation
-	if ( winner || score )
-	{
-		if ( status != "Finished" )
-		{
-			message += "Winner and/or score cannot exist without updating status to Finished";
-			isValid = false;
-		}
 	}
 	
 	// If isValid is still true, accept inputs
